@@ -22,13 +22,15 @@ for tc in range(1, T + 1):
         for dr, dc in delta:
             nr, nc = r + dr, c + dc
             point_li = []
-            if 0 <= nr < N and 0 <= nc < N and board[r][c] + board[nr][nc] == 3:
+            if 0 <= nr < N and 0 <= nc < N and board[nr][nc] !=  0 and board[nr][nc] != board[r][c]:
+                flag = True
                 while 0 <= nr < N and 0 <= nc < N:
                     if board[nr][nc] == 0:
                         break
                     if board[nr][nc] == st:
                         for xr, xc in point_li:
                             board[xr][xc] = st
+                        break
                     point_li.append((nr, nc))
                     nr += dr
                     nc += dc
