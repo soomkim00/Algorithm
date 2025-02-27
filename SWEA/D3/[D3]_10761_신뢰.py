@@ -15,12 +15,10 @@ def cmd_robot(name: str, btn: int):
     else:
         n = Orange
 
-    if time - n['time'] > abs(btn - n['pos']):
+    if time - n['time'] >= abs(btn - n['pos']):
         time += 1
-    elif time < abs(btn - n['pos']) + 1:
-        time = abs(btn - n['pos']) + 1
     else:
-        time += abs(btn - n['pos']) + 1
+        time += abs(btn - (time - n['time'])) + 1
     n['time'] = time
     n['pos'] = btn
 
