@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76edff3b-b928-4cc3-a77d-4cda90e72c8a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_2819_격자판의_숫자_이어_붙이기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_2819_격자판의_숫자_이어_붙이기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/D3/[D3]_4615_재미있는_오셀로_게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D3/[D3]_4615_재미있는_오셀로_게임.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_1953_탈주범_검거.py" beforeDir="false" afterPath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_1953_탈주범_검거.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5656_벽돌깨기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5656_벽돌깨기.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +34,57 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SWEA/D3" />
   </component>
-  <component name="RunManager" selected="Python.[모의SW역량]_5650_핀볼_게임">
-    <configuration name="[D4]_10966_물놀이를_가자" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SSAFY\Desktop\sumin\Algorithm\SWEA\D3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.[D3]_1220_Magnetic">
+    <configuration name="[D3]_1220_Magnetic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/D3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/D3/[D3]_1220_Magnetic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[D3]_2805_농작물_수확하기_bfs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/D3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/D3/[D3]_2805_농작물_수확하기_bfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[모의SW역량]_1953_탈주범_검거" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -45,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[D4]_10966_물놀이를_가자.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_1953_탈주범_검거.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="[모의SW역량]_2117_홈_방범_서비스" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="[모의SW역량]_5656_벽돌깨기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,28 +138,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2117_홈_방범_서비스.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="[모의SW역량]_5650_핀볼_게임" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Algorithm" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SW_역량테스트/A" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5650_핀볼_게임.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5656_벽돌깨기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,10 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.[모의SW역량]_5650_핀볼_게임" />
-        <item itemvalue="Python.[D4]_10966_물놀이를_가자" />
+        <item itemvalue="Python.[D3]_1220_Magnetic" />
+        <item itemvalue="Python.[D3]_2805_농작물_수확하기_bfs" />
         <item itemvalue="Python.[모의SW역량]_2105_디저트_카페" />
-        <item itemvalue="Python.[모의SW역량]_2117_홈_방범_서비스" />
+        <item itemvalue="Python.[모의SW역량]_1953_탈주범_검거" />
+        <item itemvalue="Python.[모의SW역량]_5656_벽돌깨기" />
       </list>
     </recent_temporary>
   </component>
