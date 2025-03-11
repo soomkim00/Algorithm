@@ -1,3 +1,6 @@
+# 각 지점에서 대각선 방향으로 탐색
+# dfs로
+
 import sys
 
 sys.stdin = open("input.txt", "r")
@@ -8,7 +11,7 @@ def dfs(r, c):
 
 
 T = int(input())
-delta = [(1, 1), (1, -1), (-1, -1), (-1, 1)]
+delta = [(1, 1), (1, -1), (-1, -1), (-1, 1)]  # 대각선 방향 델타 (사각형이 만들어지는 순서로)
 
 for t in range(1, T + 1):
     N = int(input())
@@ -19,7 +22,5 @@ for t in range(1, T + 1):
         for c in range(N):
             route = []
             dfs(r, c)
-
-
 
     print(f"#{t} ")

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="76edff3b-b928-4cc3-a77d-4cda90e72c8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/D3/[D3]_1220_Magnetic.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D3/[D3]_1220_Magnetic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/D3/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D3/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" beforeDir="false" afterPath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
       <recent name="C:\Users\SSAFY\Desktop\sumin\Algorithm\SWEA\D3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[D3]_1220_Magnetic">
+  <component name="RunManager" selected="Python.[모의SW역량]_2105_디저트_카페">
     <configuration name="[D3]_1220_Magnetic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,9 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.[모의SW역량]_2105_디저트_카페" />
         <item itemvalue="Python.[D3]_1220_Magnetic" />
         <item itemvalue="Python.[D3]_2805_농작물_수확하기_bfs" />
-        <item itemvalue="Python.[모의SW역량]_2105_디저트_카페" />
         <item itemvalue="Python.[모의SW역량]_1953_탈주범_검거" />
         <item itemvalue="Python.[모의SW역량]_5656_벽돌깨기" />
       </list>
