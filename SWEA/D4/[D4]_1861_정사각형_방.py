@@ -35,9 +35,12 @@ for t in range(1, T + 1):
                     if 0 <= nr < N and 0 <= nc < N and not visited[nr][nc] and arr[nr][nc] - arr[tr][tc] == 1:
                         visited[nr][nc] = visited[tr][tc] + 1
                         q.append((nr, nc))
-                        temp_len = visited[nr][nc]
-            if max_len <= temp_len:
+                        if visited[nr][nc] > temp_len:
+                            temp_len = visited[nr][nc]
+            if temp_len > max_len:
                 max_len = temp_len
+                max_num_li = [arr[r][c]]
+            elif temp_len == max_len:
                 max_num_li.append(arr[r][c])
 
     room_num = min(max_num_li)
