@@ -2,17 +2,34 @@ import sys
 
 sys.stdin = open("input.txt", "r")
 
+
 # 총 금액 -> 가능한가?
-# 적당히 큰 금액 -> 이진탐색
-# 금액이 이용권으로 딱 안떨어지는데.. 근사치 구해서 가까운 무언가..? 복잡하다
-#
+
+def recur(month, temp):
+    global min_cost
+
+    # 최소값보다 현재값이 커지면 탐색 x
+    if temp > min_cost:
+        return
+
+    # 1년 끝나면 결과 비교 후 최신화
+    if month > 12:
+        min_cost = min(min_cost, temp)
+        return
+
+    recur(month + 1, temp + use[month] * d)
+    recur(month + 1, temp + m)
+    recur(month + 3, temp + m3)
+    recur(month + 12, temp + y)
+
 
 T = int(input())
 
 for tc in range(1, T + 1):
     d, m, m3, y = map(int, input().split())
-    cost = list(map(int, input().split()))
-    print(d, m, m3, y)
-    print(cost)
+    use = [0] + list(map(int, input().split()))
 
-    print(f"#{tc} ")
+    min_cost = y
+    recur(1, 0)
+
+    print(f"#{tc} {min_cost}")
