@@ -3,10 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="76edff3b-b928-4cc3-a77d-4cda90e72c8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/D3/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D3/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/D4/[D4]_1486_장훈이의_높은_선반.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D4/[D4]_1486_장훈이의_높은_선반.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/[모의_SW_역량]_1952_수영장.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/[모의_SW_역량]_1952_수영장.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" beforeDir="false" afterPath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/D3/[D3]_10761_신뢰.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D3/[D3]_10761_신뢰.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/1949_등산로_조성.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/SW_역량테스트.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/A.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_10966_물놀이를_가자.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_1249_보급로.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_1249_보급로_plus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D4]_2819_격자판의_숫자_이어_붙이기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D5]_1248_공통조상.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D6]_1267_작업순서.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[D6]_1267_작업순서.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_1953_탈주범_검거.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2117_홈_방범_서비스.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5650_핀볼_게임.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_5656_벽돌깨기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/A/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/IM/[D2]_1288_새로운_불면증_치료법.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/IM/[D2]_1959_두_개의_숫자열.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/IM/[D2]_1979_어디에_단어가_들어갈_수_있을까.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/IM/[D3]_10761_신뢰.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SW_역량테스트/IM/[D3]_3499_퍼펙트_셔플.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +70,7 @@
       <recent name="C:\Users\SSAFY\Desktop\sumin\Algorithm\SWEA\D3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[모의SW역량]_2105_디저트_카페">
+  <component name="RunManager" selected="Python.[모의SW역량]_활주로_건설">
     <configuration name="[D3]_2817_부분_수열의 합" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="[D4]_1486_장훈이의_높은_선반" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="[모의SW역량]_2105_디저트_카페 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,32 +100,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/D4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/모의_SW_역량테스트" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/D4/[D4]_1486_장훈이의_높은_선반.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="[D4]_1861_정사각형_방_plus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Algorithm" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/D4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/D4/[D4]_1861_정사각형_방_plus.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/[모의SW역량]_2105_디저트_카페.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,6 +126,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SW_역량테스트/A/[모의SW역량]_2105_디저트_카페.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[모의SW역량]_활주로_건설" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/모의_SW_역량테스트" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/모의_SW_역량테스트/[모의SW역량]_활주로_건설.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.[모의SW역량]_활주로_건설" />
+        <item itemvalue="Python.[모의SW역량]_2105_디저트_카페 (1)" />
         <item itemvalue="Python.[모의SW역량]_2105_디저트_카페" />
         <item itemvalue="Python.[D3]_2817_부분_수열의 합" />
         <item itemvalue="Python.[모의_SW_역량]_1952_수영장" />
-        <item itemvalue="Python.[D4]_1486_장훈이의_높은_선반" />
-        <item itemvalue="Python.[D4]_1861_정사각형_방_plus" />
       </list>
     </recent_temporary>
   </component>
