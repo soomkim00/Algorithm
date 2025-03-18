@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="76edff3b-b928-4cc3-a77d-4cda90e72c8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/D4/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D4/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/D4/[D4]_11446_사탕_가방.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/D4/[D4]_11446_사탕_가방.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/백준/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2tRhzUPRftFpwygdljpQ4m4DLfG" />
   <component name="ProjectLevelVcsManager">
@@ -39,7 +48,7 @@
       <recent name="C:\Users\SSAFY\Desktop\sumin\Algorithm\SWEA\D3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.[D4]_11446_사탕_가방">
     <configuration name="1868_파핑파핑_지뢰찾기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.[D4]_11446_사탕_가방" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.1868_파핑파핑_지뢰찾기" />
         <item itemvalue="Python.[모의SW역량]_활주로_건설" />
         <item itemvalue="Python.[모의SW역량]_2105_디저트_카페 (1)" />
