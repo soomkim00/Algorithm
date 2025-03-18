@@ -1,16 +1,15 @@
-T = int(input())
+import sys
 
-for _ in range(T):
-    k = int(input())
-    n = int(input())
-    apt = [[0] * n for _ in range(k+1)]
-    for i in range(n):
-        apt[0][i] = i+1
-    for i in range(k+1):
-        apt[i][0] = 1
+if __name__ == "__main__":
+    N = int(input())
+    word = [[] for _ in range(52)]
+    for _ in range(N):
+        w = sys.stdin.readline()
+        word[len(w)].append(w)
 
-    for r in range(1, k+1):
-        for c in range(1, n):
-            apt[r][c] = apt[r-1][c] + apt[r][c-1]
-
-    print(apt[k][n-1])
+    for i in range(52):
+        if word[i]:
+            word[i] = list(set(word[i]))
+            word[i].sort()
+            for w in word[i]:
+                sys.stdout.write(w)
