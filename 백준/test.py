@@ -1,8 +1,15 @@
-N = int(input())
+import sys
 
-arr = [int(input()) for _ in range(N)]
-
-arr.sort()
-
-for num in arr:
-    print(num)
+if __name__ == "__main__":
+    N = int(input())
+    total = 1
+    for i in range(2, N + 1):
+        total *= i
+    cnt = 0
+    while True:
+        if total % 10 != 0:
+            break
+        else:
+            cnt += 1
+            total //= 10
+    print(cnt)
