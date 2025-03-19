@@ -2,14 +2,14 @@ import sys
 
 if __name__ == "__main__":
     N = int(input())
-    word = [[] for _ in range(52)]
-    for _ in range(N):
-        w = sys.stdin.readline()
-        word[len(w)].append(w)
-
-    for i in range(52):
-        if word[i]:
-            word[i] = list(set(word[i]))
-            word[i].sort()
-            for w in word[i]:
-                sys.stdout.write(w)
+    total = 1
+    for i in range(2, N + 1):
+        total *= i
+    cnt = 0
+    while True:
+        if total % 10 != 0:
+            break
+        else:
+            cnt += 1
+            total //= 10
+    print(cnt)
