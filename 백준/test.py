@@ -2,14 +2,17 @@ import sys
 
 if __name__ == "__main__":
     N = int(input())
-    total = 1
-    for i in range(2, N + 1):
-        total *= i
-    cnt = 0
-    while True:
-        if total % 10 != 0:
-            break
+    po_li = []
+    ng_li = []
+    for _ in range(N):
+        num = int(sys.stdin.readline().strip())
+        if num >= 0:
+            po_li.append(num)
         else:
-            cnt += 1
-            total //= 10
-    print(cnt)
+            ng_li.append(num)
+    po_li.sort()
+    ng_li.sort()
+    for n in ng_li:
+        print(n)
+    for n in po_li:
+        print(n)
