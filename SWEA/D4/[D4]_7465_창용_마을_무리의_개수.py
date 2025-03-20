@@ -19,9 +19,9 @@ def union(x, y):
         return
 
     if king_x > king_y:
-        parents[y] = king_x
+        parents[king_y] = king_x
     else:
-        parents[x] = king_y
+        parents[king_x] = king_y
 
 
 if __name__ == "__main__":
@@ -40,8 +40,8 @@ if __name__ == "__main__":
         for s, e in adj_li:
             if find_king(s) != find_king(e):
                 union(s, e)
-        print(parents)
-
+        for i in range(1, N + 1):
+            find_king(i)
         result = len(set(parents[1:]))
 
         print(f"#{tc} {result}")
