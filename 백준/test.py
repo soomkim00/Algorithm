@@ -1,18 +1,6 @@
-import sys
+point = [[1, 2, 3], [4, 5, 6]]
+m = 1
+for i in range(3):
+    point[m][i] = point[m][i] - 1 if point[m][i] >= 1 else 7
 
-if __name__ == "__main__":
-    N = int(input())
-    po_li = []
-    ng_li = []
-    for _ in range(N):
-        num = int(sys.stdin.readline().strip())
-        if num >= 0:
-            po_li.append(num)
-        else:
-            ng_li.append(num)
-    po_li.sort()
-    ng_li.sort()
-    for n in ng_li:
-        print(n)
-    for n in po_li:
-        print(n)
+print(point)
