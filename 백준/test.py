@@ -1,6 +1,14 @@
-point = [[1, 2, 3], [4, 5, 6]]
-m = 1
-for i in range(3):
-    point[m][i] = point[m][i] - 1 if point[m][i] >= 1 else 7
+import sys
 
-print(point)
+
+def solve():
+    N = sys.stdin.readline()
+    a = list(map(int, sys.stdin.readline().split()))
+    M = sys.stdin.readline()
+    b = list(map(int, sys.stdin.readline().split()))
+    print(a)
+    print(b)
+
+
+if __name__ == "__main__":
+    solve()
