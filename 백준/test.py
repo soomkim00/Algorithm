@@ -1,27 +1,28 @@
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
 
-def round(num):
-    if (num - int(num)) >= 0.5:
-        return int(num) + 1
-    else:
-        return int(num)
-
-
 def solve():
-    N = int(input())
-    if N == 0:
-        print(0)
-    else:
-        data = []
-        for _ in range(N):
-            data.append(int(input()))
-        cut = round(N * 0.15)
-        data.sort()
-        cutted_data = data[cut:N - cut]
-        print(round(sum(cutted_data) / (N - 2 * cut)))
+    T = int(input())
+    for _ in range(T):
+        N, M = map(int, input().split())
+        important = list(map(int, input().split()))
+        imp_sorted = sorted(important,reverse=True)
+        arr = deque()
+        for i in range(N):
+            arr.append((i, important[i]))
+        cnt = 0
+        while arr:
+            temp = arr.popleft()
+            if temp[1] == imp_sorted[cnt]:
+                if temp[0] == M:
+                    print(cnt + 1)
+                    break
+                cnt += 1
+            else:
+                arr.append(temp)
 
 
 if __name__ == "__main__":
