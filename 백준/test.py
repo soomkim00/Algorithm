@@ -1,28 +1,43 @@
 import sys
-from collections import deque
 
 input = sys.stdin.readline
 
 
 def solve():
-    T = int(input())
-    for _ in range(T):
-        N, M = map(int, input().split())
-        important = list(map(int, input().split()))
-        imp_sorted = sorted(important,reverse=True)
-        arr = deque()
-        for i in range(N):
-            arr.append((i, important[i]))
+    K, N = map(int, input().split())
+    lines = [int(input()) for _ in range(K)]
+
+    lenght = min(lines)
+    cnt = 0
+    while True:
+        for line in lines:
+            cnt += line // lenght
+        if cnt >= N:
+            break
+        else:
+            cnt = 0
+            lenght //= 2
+
+    # 그리디 -> 시간초과
+    # while True:
+    #     cnt = 0
+    #     lenght += 1
+    #     for line in lines:
+    #         cnt += line // lenght
+    #     if cnt < N:
+    #         lenght -= 1
+    #         break
+
+    # 이진탐색
+
+    l = lenght
+    r = lenght * 2
+    while l <= r:
+        mid = l + (r - l) // 2
         cnt = 0
-        while arr:
-            temp = arr.popleft()
-            if temp[1] == imp_sorted[cnt]:
-                if temp[0] == M:
-                    print(cnt + 1)
-                    break
-                cnt += 1
-            else:
-                arr.append(temp)
+        for line in lines:
+            cnt += line // mid
+        if cnt
 
 
 if __name__ == "__main__":
