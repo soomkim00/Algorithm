@@ -4,32 +4,32 @@ input = sys.stdin.readline
 
 
 def solve():
-    N = int(input())
-    num = list(int(input()) for _ in range(N))
-    num.sort()
-    count = {}
-    for n in num:
-        if n in count:
-            count[n] += 1
+    M = int(input())
+    S = set()
+    for _ in range(M):
+        command = list(input().split())
+        c = command[0]
+        if len(command) == 1:
+            if c == 'all':
+                S = set(i for i in range(1, 21))
+            elif c == 'empty':
+                S = set()
         else:
-            count[n] = 1
-
-    max_count = max(count.values())
-    max_num = []
-    for n in count:
-        if max_count == count[n]:
-            max_num.append(n)
-
-    result = 0
-    if len(max_num) > 1:
-        result = max_num[1]
-    else:
-        result = max_num[0]
-
-    print(round(sum(num) / N))
-    print(num[N // 2])
-    print(result)
-    print(num[-1] - num[0])
+            x = int(command[1])
+            if c == 'add':
+                S.add(x)
+            elif c == 'remove' and x in S:
+                S.remove(x)
+            elif c == 'toggle':
+                if x in S:
+                    S.remove(x)
+                else:
+                    S.add(x)
+            elif c == 'check':
+                if x in S:
+                    print(1)
+                else:
+                    print(0)
 
 
 if __name__ == "__main__":
