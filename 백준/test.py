@@ -4,32 +4,19 @@ input = sys.stdin.readline
 
 
 def solve():
-    M = int(input())
-    S = set()
-    for _ in range(M):
-        command = list(input().split())
-        c = command[0]
-        if len(command) == 1:
-            if c == 'all':
-                S = set(i for i in range(1, 21))
-            elif c == 'empty':
-                S = set()
-        else:
-            x = int(command[1])
-            if c == 'add':
-                S.add(x)
-            elif c == 'remove' and x in S:
-                S.remove(x)
-            elif c == 'toggle':
-                if x in S:
-                    S.remove(x)
-                else:
-                    S.add(x)
-            elif c == 'check':
-                if x in S:
-                    print(1)
-                else:
-                    print(0)
+    N, K = map(int, input().split())
+    coins = [int(input().rstrip()) for _ in range(N)]
+    idx = len(coins) - 1
+    count = 0
+
+    while K:
+        if coins[idx] <= K:
+            temp = K // coins[idx]
+            count += temp
+            K -= temp * coins[idx]
+        idx -= 1
+
+    print(count)
 
 
 if __name__ == "__main__":
