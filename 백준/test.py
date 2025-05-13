@@ -4,19 +4,17 @@ input = sys.stdin.readline
 
 
 def solve():
-    N, K = map(int, input().split())
-    coins = [int(input().rstrip()) for _ in range(N)]
-    idx = len(coins) - 1
-    count = 0
+    T = int(input())
 
-    while K:
-        if coins[idx] <= K:
-            temp = K // coins[idx]
-            count += temp
-            K -= temp * coins[idx]
-        idx -= 1
+    def fibo_count(n):
+        nonlocal cnt
 
-    print(count)
+
+    for _ in range(T):
+        n = int(input())
+        cnt0, cnt1 = 0
+        fibo_count(n)
+        print(cnt)
 
 
 if __name__ == "__main__":
