@@ -1,29 +1,23 @@
 import sys
-from collections import deque
 
 input = sys.stdin.readline
 
-
 def solve():
     N = int(input())
-    result = 0
-    q = deque()
-    q.append((N, 0))
+    dp = [0] * (N + 1)  # dp[i] = i를 1로 만드는 최소 연산 횟수
 
-    while True:
-        number, count = q.popleft()
-        if number == 1:
-            result = count
-            break
+    for i in range(2, N + 1):
+        # 1을 빼는 경우
+        dp[i] = dp[i - 1] + 1
 
-        if number % 3 == 0:
-            q.append((number // 3, count + 1))
-        if number % 2 == 0:
-            q.append((number // 2, count + 1))
-        q.append((number - 1, count + 1))
+        # 2로 나누어 떨어질 때
+        if i % 2 == 0:
+            dp[i] = min(dp[i], dp[i // 2] + 1)
+        # 3으로 나누어 떨어질 때
+        if i % 3 == 0:
+            dp[i] = min(dp[i], dp[i // 3] + 1)
 
-    print(result)
-
+    print(dp[N])
 
 if __name__ == "__main__":
     solve()
