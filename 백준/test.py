@@ -6,32 +6,32 @@ input = sys.stdin.readline
 
 def solve():
     N = int(input())
-    stairs = [0] + list(int(input()) for _ in range(N))
+    K = int(input())
+    computer = [[] for _ in range(N + 1)]
+
+    for _ in range(K):
+        s, e = map(int, input().split())
+        computer[s].append(e)
+        computer[e].append(s)
+
     q = deque()
-    q.append((0, 0, 0))  # 현재 칸, 연속된 1 개수, 총점
-    memo = dict()
-
+    q.append(1)
+    visited = [0] * (N + 1)
+    count = 0
     while q:
-        now, cnt, score = q.popleft()
-
-        # 도착점 넘어갔는지, 연속된 세번인지
-        if now > N or (cnt >= 2 and now > 2):
+        now = q.popleft()
+        if visited[now]:
             continue
+        visited[now] = 1
+        count += 1
 
-        temp = score + stairs[now]
+        for next in computer[now]:
+            q.append(next)
 
-        if now in memo and temp <= memo[now]:
-            continue
-
-        score = temp
-        memo[now] = score
-
-        # 전진
-        q.append((now + 1, cnt + 1, score))  # 1칸 전진
-        q.append((now + 2, 0, score))
-
-    print(memo)
-    print(memo[N])
+    if count:
+        print(count - 1)
+    else:
+        print(count)
 
 
 if __name__ == "__main__":
