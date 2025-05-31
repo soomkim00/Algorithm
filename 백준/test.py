@@ -1,32 +1,38 @@
 import sys
 from collections import deque
+from collections import deque
 
 input = sys.stdin.readline
 
 
 def solve():
     N = int(input())
-    result = 0
+    K = int(input())
+    computer = [[] for _ in range(N + 1)]
+
+    for _ in range(K):
+        s, e = map(int, input().split())
+        computer[s].append(e)
+        computer[e].append(s)
+
     q = deque()
-    q.append((N, 0))
-    memo = dict()
-
-    while True:
-        number, count = q.popleft()
-        if number in memo and count >= memo[number]:
+    q.append(1)
+    visited = [0] * (N + 1)
+    count = 0
+    while q:
+        now = q.popleft()
+        if visited[now]:
             continue
+        visited[now] = 1
+        count += 1
 
-        if number == 1:
-            result = count
-            break
+        for next in computer[now]:
+            q.append(next)
 
-        if number % 3 == 0:
-            q.append((number // 3, count + 1))
-        if number % 2 == 0:
-            q.append((number // 2, count + 1))
-        q.append((number - 1, count + 1))
-
-    print(result)
+    if count:
+        print(count - 1)
+    else:
+        print(count)
 
 
 if __name__ == "__main__":
