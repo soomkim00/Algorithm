@@ -1,27 +1,32 @@
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
 
 def solve():
-    T = int(input())
+    N = int(input())
+    result = 0
+    q = deque()
+    q.append((N, 0))
+    memo = dict()
 
-    def fibo_count(n):
-        nonlocal cnt0, cnt1
-        if n == 0:
-            cnt0 += 1
-            return 0
-        elif n == 1:
-            cnt1 += 1
-            return 1
-        else:
-            return fibo_count(n - 1) + fibo_count(n - 2)
+    while True:
+        number, count = q.popleft()
+        if number in memo and count >= memo[number]:
+            continue
 
-    for _ in range(T):
-        n = int(input())
-        cnt0, cnt1 = 0, 0
-        fibo_count(n)
-        sys.stdout.write(str(cnt0) + ' ' + str(cnt1) + '\nl')
+        if number == 1:
+            result = count
+            break
+
+        if number % 3 == 0:
+            q.append((number // 3, count + 1))
+        if number % 2 == 0:
+            q.append((number // 2, count + 1))
+        q.append((number - 1, count + 1))
+
+    print(result)
 
 
 if __name__ == "__main__":
