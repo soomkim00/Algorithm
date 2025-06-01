@@ -1,21 +1,10 @@
 import sys
+from datetime import date
 input = sys.stdin.readline
 
 def solve():
-    T = int(input())
-    for _ in range(T):
-        N = int(input())
-        data = dict()
-        for _ in range(N):
-            name, category = input().split()
-            if category in data:
-                data[category] += 1
-            else:
-                data[category] = 1
-        data_arr = list(data.values())
-
-        total = 0
-        total += sum(data_arr)
+    today = date.today()
+    print(today)
 
 
 if __name__ == "__main__":
