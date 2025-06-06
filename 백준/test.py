@@ -1,17 +1,20 @@
 import sys
+from heapq import heappush, heappop
 
 input = sys.stdin.readline
 
 
 def solve():
-    N, M = map(int, input().split())
-    data = [i for i in range(1, N + 1)]
-    for _ in range(M):
-        i, j = map(int, input().split())
-        i -= 1
-        j -= 1
-        data[i], data[j] = data[j], data[i]
-    print(*data)
+    N = int(input())
+    data = []
+    for _ in range(N):
+        num = int(input())
+        if num:
+            heappush(data, num)
+        elif data:
+            print(heappop(data))
+        else:
+            print(0)
 
 
 if __name__ == "__main__":
