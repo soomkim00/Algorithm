@@ -4,13 +4,14 @@ input = sys.stdin.readline
 
 
 def solve():
-    data = set()
-    for _ in range(28):
-        data.add(int(input()))
+    N, M = map(int, input().split())
+    data1 = [list(map(int, input().split())) for _ in range(N)]
+    data2 = [list(map(int, input().split())) for _ in range(N)]
 
-    for i in range(1, 31):
-        if i not in data:
-            print(i)
+    for i in range(N):
+        for j in range(M):
+            print(data1[i][j] + data2[i][j], end=' ')
+        print()
 
 
 if __name__ == "__main__":
