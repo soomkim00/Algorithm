@@ -1,39 +1,34 @@
 import sys
-
 input = sys.stdin.readline
 
+def find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])  # 경로 압축
+    return parent[x]
+
+def union(a, b):
+    ra = find(a)
+    rb = find(b)
+    if ra != rb:
+        parent[rb] = ra             # 한 쪽 루트만 연결
 
 def solve():
     N, M = map(int, input().split())
-    edges = [[] for _ in range(N + 1)]
-    visited = [0] * (N + 1)
+    # 1. 초기화: 각 정점은 자기 자신이 루트
+    global parent
+    parent = list(range(N + 1))
 
+    # 2. 입력마다 union
     for _ in range(M):
-        s, e = map(int, input().split())
-        edges[s].append(e)
-        edges[e].append(s)
+        u, v = map(int, input().split())
+        union(u, v)
 
-    count = 0
-    stack = []
+    # 3. 서로 다른 루트 개수 세기
+    roots = set()
     for i in range(1, N + 1):
-        if visited[i]:
-            continue
-        count += 1
+        roots.add(find(i))
 
-        stack.append(i)
-
-        while stack:
-            now = stack.pop()
-            if visited[now]:
-                continue
-            visited[now] = 1
-
-            for next in edges[now]:
-                if not visited[next]:
-                    stack.append(next)
-
-    print(count)
-
+    print(len(roots))
 
 if __name__ == "__main__":
     solve()
