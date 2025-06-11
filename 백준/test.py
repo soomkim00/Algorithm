@@ -5,33 +5,34 @@ input = sys.stdin.readline
 
 def solve():
     N, M = map(int, input().split())
-    trees = list(map(int, input().split()))
+    edges = [[] for _ in range(N + 1)]
+    visited = [0] * (N + 1)
 
-    trees.sort(reverse=True)
+    for _ in range(M):
+        s, e = map(int, input().split())
+        edges[s].append(e)
+        edges[e].append(s)
 
-    s = trees[0] - 1
-    e = 0
+    count = 0
+    stack = []
+    for i in range(1, N + 1):
+        if visited[i]:
+            continue
+        count += 1
 
-    while s >= e:
-        H = (s + e) // 2
-        total = 0
-        flag = 0
+        stack.append(i)
 
-        for tree in trees:
-            if H >= tree:
-                break
+        while stack:
+            now = stack.pop()
+            if visited[now]:
+                continue
+            visited[now] = 1
 
-            total += tree - H
+            for next in edges[now]:
+                if not visited[next]:
+                    stack.append(next)
 
-            if total >= M:
-                flag = 1
-                break
-        if flag:  # 현재 H가 충분히 낮다 -> 높여보자
-            e = H + 1
-        else:
-            s = H - 1
-
-    print(s)
+    print(count)
 
 
 if __name__ == "__main__":
