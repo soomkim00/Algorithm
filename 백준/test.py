@@ -4,36 +4,32 @@ input = sys.stdin.readline
 
 
 def solve():
-    N, M = map(int, input().split())
-    edges = [[] for _ in range(N + 1)]
-    visited = [0] * (N + 1)
+    data = list(input().strip())
+    miss_idx = 0
+    total = 0
 
-    for _ in range(M):
-        s, e = map(int, input().split())
-        edges[s].append(e)
-        edges[e].append(s)
-
-    count = 0
-    stack = []
-    for i in range(1, N + 1):
-        if visited[i]:
+    for i in range(13):
+        if not data[i].isdecimal():
+            miss_idx = i
             continue
-        count += 1
 
-        stack.append(i)
+        if i % 2 == 0:
+            total += int(data[i])
+        else:
+            total += 3 * int(data[i])
 
-        while stack:
-            now = stack.pop()
-            if visited[now]:
-                continue
-            visited[now] = 1
+    ans = 0
+    while True:
+        if miss_idx % 2 == 0:
+            add_num = ans
+        else:
+            add_num = 3 * ans
 
-            for next in edges[now]:
-                if not visited[next]:
-                    stack.append(next)
+        if (total + add_num) % 10 == 0:
+            print(ans)
+            return
+        ans += 1
 
-    print(count)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     solve()
