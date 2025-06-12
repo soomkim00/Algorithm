@@ -1,34 +1,31 @@
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
 
 def solve():
-    data = list(input().strip())
-    miss_idx = 0
-    total = 0
+    N, K = map(int, input().split())
+    q = deque()
+    memo = set()
+    q.append((N, 0))
 
-    for i in range(13):
-        if not data[i].isdecimal():
-            miss_idx = i
-            continue
+    while q:
+        pos, cnt = q.popleft()
 
-        if i % 2 == 0:
-            total += int(data[i])
-        else:
-            total += 3 * int(data[i])
-
-    ans = 0
-    while True:
-        if miss_idx % 2 == 0:
-            add_num = ans
-        else:
-            add_num = 3 * ans
-
-        if (total + add_num) % 10 == 0:
-            print(ans)
+        # 종료조건
+        if pos == K:
+            print(cnt)
             return
-        ans += 1
+
+        # 메모이제이션
+        if pos in memo or pos < 0 or pos > 100000:
+            continue
+        memo.add(pos)
+
+        q.append((pos - 1, cnt + 1))
+        q.append((pos + 1, cnt + 1))
+        q.append((pos * 2, cnt + 1))
 
 
 if __name__ == '__main__':
