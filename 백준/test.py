@@ -1,31 +1,50 @@
 import sys
-from collections import deque
+from heapq import heappop, heappush
+from pprint import pprint
 
 input = sys.stdin.readline
 
+delta = ((-1, 0), (1, 0), (0, -1), (0, 1))  # 상 하 좌 우
+
 
 def solve():
-    N, K = map(int, input().split())
-    q = deque()
-    memo = set()
-    q.append((N, 0))
+    n, m = map(int, input().split())
+    data = [list(map(int, input().split())) for _ in range(n)]
+    dist = [[float('inf')] * m for _ in range(n)]
 
-    while q:
-        pos, cnt = q.popleft()
+    sr, sc = 0, 0
 
-        # 종료조건
-        if pos == K:
-            print(cnt)
-            return
+    for r in range(n):
+        for c in range(m):
+            if data[r][c] == 2:
+                sr, sc = r, c
+            elif data[r][c] == 0:
+                dist[r][c] = 0
 
-        # 메모이제이션
-        if pos in memo or pos < 0 or pos > 100000:
+    dist[sr][sc] = 0
+
+    h = []
+    heappush(h, (0, sr, sc))
+
+    while h:
+        now_dist, tr, tc = heappop(h)
+
+        if dist[tr][tc] < now_dist:
             continue
-        memo.add(pos)
 
-        q.append((pos - 1, cnt + 1))
-        q.append((pos + 1, cnt + 1))
-        q.append((pos * 2, cnt + 1))
+        for dr, dc in delta:
+            nr, nc = tr + dr, tc + dc
+            if 0 <= nr < n and 0 <= nc < m and data[nr][nc] and now_dist + 1 < dist[nr][nc]:
+                dist[nr][nc] = now_dist + 1
+                heappush(h, (now_dist + 1, nr, nc))
+
+    for r in range(n):
+        for c in range(m):
+            if dist[r][c] == float('inf'):
+                dist[r][c] = -1
+
+    for r in range(n):
+        print(*dist[r])
 
 
 if __name__ == '__main__':
