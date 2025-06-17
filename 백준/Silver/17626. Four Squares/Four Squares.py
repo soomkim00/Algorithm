@@ -11,6 +11,7 @@ def solve():
     # bfs
     q = deque()
     q.append((n, 0))  # 남은 수, 사용한(뺀) 제곱근 숫자
+    visited = set()
 
     while q:
         now, cnt = q.popleft()
@@ -18,10 +19,14 @@ def solve():
 
         for i in range(div, 0, -1):
             remain = now - i ** 2
+
             if remain == 0:
                 print(cnt + 1)
                 return
-            q.append((remain, cnt + 1))
+
+            if remain not in visited:
+                visited.add(remain)
+                q.append((remain, cnt + 1))
 
 
 if __name__ == '__main__':
