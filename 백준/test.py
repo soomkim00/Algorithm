@@ -1,60 +1,54 @@
 import sys
-from heapq import heappop, heappush
+from collections import deque
 
 input = sys.stdin.readline
 
+delta = ((-1, 0), (1, 0), (0, -1), (0, 1))
+
 
 def solve():
-    N, M, B = map(int, input().split())
-    data = [list(map(int, input().split())) for _ in range(N)]
+    N, M = map(int, input().split())
+    data = [list(input().strip()) for _ in range(N)]
 
-    count = dict()
-    for r in range(N):
-        for c in range(M):
-            if data[r][c] in count:
-                count[data[r][c]] += 1
-            else:
-                count[data[r][c]] = 1
+    # 시작점 탐색
+    sr, sc = 0, 0
 
-    min_height = min(count.keys())
-    max_height = max(count.keys())
+    def find_start():
+        nonlocal sr, sc
+        for r in range(N):
+            for c in range(M):
+                if data[r][c] == 'I':
+                    sr, sc = r, c
+                    return
 
-    min_t = float('inf')  # 최소 시간
-    max_h = 0  # 높이
-    for now in range(min_height, max_height + 1):
-        remain = B  # 인벤토리 현황
-        temp_t = 0  # 현재 누적 시간
-        flag = 1
+    find_start()
 
-        for k in sorted(count.keys(), reverse=True):
-            if now == k:
-                continue
+    # bfs
+    result = 0  # 만난 사람
+    visited = [[0] * M for _ in range(N)]
+    q = deque()
+    q.append((sr, sc))
 
-            if now > k:
-                block = ((now - k) * count[k])
-                if block > remain:
-                    flag = 0
-                    break
-                temp_t += block
-                remain -= block
-            else:
-                block = ((k - now) * count[k])
-                temp_t += block * 2
-                remain += block
+    while q:
+        tr, tc = q.popleft()
 
-            if temp_t > min_t:
-                flag = 0
-                break
+        if visited[tr][tc]:
+            continue
 
-        if flag:
-            if min_t == temp_t:
-                max_h = max(max_h, now)
-            else:
-                min_t = temp_t
-                max_h = now
+        visited[tr][tc] = 1
 
-    print(min_t, max_h)
+        if data[tr][tc] == 'P':
+            result += 1
 
+        for dr, dc in delta:
+            nr, nc = tr + dr, tc + dc
+            if 0 <= nr < N and 0 <= nc < M and not visited[nr][nc] and data[nr][nc] != 'X':
+                q.append((nr, nc))
+
+    if result:
+        print(result)
+    else:
+        print('TT')
 
 
 if __name__ == '__main__':
