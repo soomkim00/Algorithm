@@ -1,54 +1,57 @@
 import sys
-from collections import deque
 
 input = sys.stdin.readline
 
-delta = ((-1, 0), (1, 0), (0, -1), (0, 1))
-
 
 def solve():
-    N, M = map(int, input().split())
-    data = [list(input().strip()) for _ in range(N)]
+    N = int(input())
 
-    # 시작점 탐색
-    sr, sc = 0, 0
+    if N == 1:
+        print(1)
+        return
+    elif N == 2:
+        print(2)
+        return
 
-    def find_start():
-        nonlocal sr, sc
-        for r in range(N):
-            for c in range(M):
-                if data[r][c] == 'I':
-                    sr, sc = r, c
-                    return
+    data = list(map(int, input().split()))
 
-    find_start()
+    result = 0
+    first = data[0]
+    second = 0
+    idx = 1
+    temp = 1
 
-    # bfs
-    result = 0  # 만난 사람
-    visited = [[0] * M for _ in range(N)]
-    q = deque()
-    q.append((sr, sc))
+    for i in range(1, N):
+        temp += 1
+        if data[i] != first:
+            second = data[i]
+            result = temp
+            idx = i + 1
+            break
 
-    while q:
-        tr, tc = q.popleft()
+    if second == 0:
+        print(temp)
+        return
 
-        if visited[tr][tc]:
-            continue
+    s_temp = 1
+    for i in range(idx, N):
+        if data[i] != first and data[i] != second:
+            first = second
+            second = data[i]
+            result = max(result, temp)
+            temp = s_temp + 1
+            s_temp = 1
+        elif data[i] == first:
+            first = second
+            second = data[i]
+            temp += 1
+        elif data[i] == second:
+            temp += 1
+            s_temp += 1
 
-        visited[tr][tc] = 1
+    result = max(result, temp)
 
-        if data[tr][tc] == 'P':
-            result += 1
-
-        for dr, dc in delta:
-            nr, nc = tr + dr, tc + dc
-            if 0 <= nr < N and 0 <= nc < M and not visited[nr][nc] and data[nr][nc] != 'X':
-                q.append((nr, nc))
-
-    if result:
-        print(result)
-    else:
-        print('TT')
+    print(result)
 
 
 if __name__ == '__main__':
