@@ -1,57 +1,44 @@
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
 
 def solve():
-    N = int(input())
+    N, M = map(int, input().split())
+    edges = [[] for _ in range(N + 1)]  # 사람 번호 1~N
 
-    if N == 1:
-        print(1)
-        return
-    elif N == 2:
-        print(2)
-        return
+    for _ in range(M):
+        s, e = map(int, input().split())
+        edges[s].append(e)
+        edges[e].append(s)  # 양방향
 
-    data = list(map(int, input().split()))
+    scores = [0] * (N + 1)  # 케빈 베이컨 점수 모음
 
-    result = 0
-    first = data[0]
-    second = 0
-    idx = 1
-    temp = 1
+    def bfs(start):
+        q = deque()
+        visited = [0] * (N + 1)
+        q.append(start)
+        while q:
+            now = q.popleft()
 
-    for i in range(1, N):
-        temp += 1
-        if data[i] != first:
-            second = data[i]
-            result = temp
-            idx = i + 1
-            break
+            for next in edges[now]:
+                if not visited[next]:
+                    visited[next] = visited[now] + 1
+                    q.append(next)
 
-    if second == 0:
-        print(temp)
-        return
+        score = 0
+        for i in range(1, N + 1):
+            if i == start:
+                continue
+            score += visited[i]
+        scores[start] = score
 
-    s_temp = 1
-    for i in range(idx, N):
-        if data[i] != first and data[i] != second:
-            first = second
-            second = data[i]
-            result = max(result, temp)
-            temp = s_temp + 1
-            s_temp = 1
-        elif data[i] == first:
-            first = second
-            second = data[i]
-            temp += 1
-        elif data[i] == second:
-            temp += 1
-            s_temp += 1
+    for i in range(1, N + 1):
+        bfs(i)
 
-    result = max(result, temp)
-
-    print(result)
+    scores[0] = float('inf')
+    print(scores.index(min(scores)))
 
 
 if __name__ == '__main__':
