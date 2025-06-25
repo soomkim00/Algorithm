@@ -7,24 +7,34 @@ delta = ((-1, 0), (1, 0), (0, -1), (0, 1))
 
 
 def solve():
-    N, M = map(int, input().split())
+    N = int(input())
     data = [list(map(int, input().strip())) for _ in range(N)]
+    counts = []
 
-    q = deque()
-    q.append((0, 0, 1))
-    data[0][0] = 0
-    while q:
-        tr, tc, cnt = q.popleft()
+    def bfs(sr, sc):
+        q = deque()
+        q.append((sr, sc))
+        data[sr][sc] = 0
+        count = 0
+        while q:
+            tr, tc = q.popleft()
+            count += 1
+            for dr, dc in delta:
+                nr, nc = tr + dr, tc + dc
+                if 0 <= nr < N and 0 <= nc < N and data[nr][nc]:
+                    data[nr][nc] = 0
+                    q.append((nr, nc))
+        counts.append(count)
 
-        for dr, dc in delta:
-            nr, nc = tr + dr, tc + dc
+    for r in range(N):
+        for c in range(N):
+            if data[r][c]:
+                bfs(r, c)
 
-            if 0 <= nr < N and 0 <= nc < M and data[nr][nc]:
-                if nr == N - 1 and nc == M - 1:
-                    print(cnt + 1)
-                    return
-                data[nr][nc] = 0
-                q.append((nr, nc, cnt + 1))
+    counts.sort()
+    print(len(counts))
+    for cnt in counts:
+        print(cnt)
 
 
 if __name__ == '__main__':
