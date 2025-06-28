@@ -1,6 +1,8 @@
 import sys
 from heapq import heappop, heappush
 
+input = sys.stdin.readline
+
 
 def solve():
     N = int(input())
