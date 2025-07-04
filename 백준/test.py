@@ -5,27 +5,18 @@ input = sys.stdin.readline
 
 
 def solve():
-    N = int(input())
-    adj_list = [list(map(int, input().split())) for _ in range(N)]
+    M, N, H = map(int, input().split())
+    data = []
+    for _ in range(H):
+        layer = [list(map(int, input().split())) for _ in range(N)]
+        data.append(layer)
 
-    result = [[0] * N for _ in range(N)]
-
-    def bfs(s):
-        q = deque()
-        q.append(s)
-        while q:
-            now = q.popleft()
-            for idx in range(N):
-                if adj_list[now][idx] and not result[s][idx]:
-                    result[s][idx] = 1
-                    q.append(idx)
-
-    for start in range(N):
-        bfs(start)
-
-    for r in result:
-        print(*r)
-
+    tomatos = set()
+    count = 0
+    for d in range(H):
+        for r in range(N):
+            for c in range(M):
+                if 
 
 if __name__ == '__main__':
     solve()
