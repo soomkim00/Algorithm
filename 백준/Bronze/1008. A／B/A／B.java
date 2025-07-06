@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -6,14 +8,9 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        double c = (double) a / b;
 
-        bw.write(c + "\n");
-        bw.flush();
-
+        System.out.println((double) a / b);
     }
 }
