@@ -5,10 +5,9 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int score = Integer.parseInt(br.readLine());
 
-        if (score >= 90) {
+        if (100 >= score && score >= 90) {
             System.out.println("A");
         } else if (score >= 80) {
             System.out.println("B");
@@ -19,6 +18,5 @@ public class Main {
         } else {
             System.out.println("F");
         }
-
     }
 }
