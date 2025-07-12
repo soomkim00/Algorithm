@@ -10,14 +10,13 @@ public class Main {
 
 
         for (int i = 1; i <= N; i++) {
-            StringBuilder sb = new StringBuilder(N);
             for (int j = 0; j < N - i; j++) {
-                sb.append(' ');
+                bw.write(' ');
             }
             for (int k = 0; k < i; k++) {
-                sb.append('*');
+                bw.write('*');
             }
-            bw.write(String.valueOf(sb) + "\n");
+            bw.newLine();
         }
         bw.flush();
     }
