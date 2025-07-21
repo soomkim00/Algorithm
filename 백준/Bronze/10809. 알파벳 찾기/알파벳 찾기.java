@@ -21,7 +21,7 @@ public class Main {
 
         StringBuilder sb = new StringBuilder(60);
         for (int i = 0; i < 26; i++) {
-            sb.append(result[i] + " ");
+            sb.append(result[i]).append(' ');
         }
         System.out.println(sb);
     }
