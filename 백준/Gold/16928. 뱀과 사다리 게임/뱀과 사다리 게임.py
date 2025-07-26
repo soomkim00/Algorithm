@@ -16,19 +16,24 @@ def solve():
         q = deque()
         visited = [False] * 101
         q.append((1, 0))  # position, count
+        visited[1] = True
 
         while q:
             pos, cnt = q.popleft()
-            visited[pos] = True
             for step in range(1, 7):
                 next = pos + step
-                # 뱀이나 사다리 확인
-                if next in moves:
-                    next = moves[next]
 
                 # 종료 확인
                 if next == 100:
                     return cnt + 1
+
+                # 범위 확인
+                if next > 100:
+                    continue
+
+                # 뱀이나 사다리 확인
+                if next in moves:
+                    next = moves[next]
 
                 # 다음 칸 접근
                 if next < 100 and not visited[next]:
