@@ -5,25 +5,31 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
 
-		for (int i = 1; i <= n; i++) {
-			int result = i;
-			int add_num = i;
+		String input = br.readLine();
+		int n = Integer.parseInt(input);
 
-			while (add_num != 0) {
-				result += add_num % 10;
-				add_num /= 10;
+		int start = n - input.length() * 9;
+		int answer = 0;
+
+		for (int i = Math.max(1, start); i <= n; i++) {
+			if (getSum(i) == n) {
+				answer = i;
+				break;
 			}
-
-			if (result == n) {
-				System.out.println(i);
-				return;
-			}
-
 		}
-		System.out.println(0);
-		
+
+		System.out.println(answer);
+
+	}
+
+	public static int getSum(int i) {
+		int res = i;
+		while (i > 0) {
+			res += i % 10;
+			i /= 10;
+		}
+		return res;
 	}
 
 }
