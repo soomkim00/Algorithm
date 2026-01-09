@@ -9,28 +9,28 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 
-		int[] pos = new int[1000001];
-		int[] neg = new int[1000001];
+		boolean[] pos = new boolean[1000001];
+		boolean[] neg = new boolean[1000001];
 
 		for (int i = 0; i < n; i++) {
 			int input = Integer.parseInt(br.readLine());
 
 			if (input >= 0) {
-				pos[input] = 1;
+				pos[input] = true;
 			} else {
-				neg[-input] = 1;
+				neg[-input] = true;
 			}
 		}
 
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		for (int j = 1000000; j > 0; j--) {
-			if (neg[j] == 1) {
+			if (neg[j]) {
 				bw.write("-" + j + "\n");
 			}
 		}
 
 		for (int k = 0; k <= 1000000; k++) {
-			if (pos[k] == 1) {
+			if (pos[k]) {
 				bw.write(k + "\n");
 			}
 		}
