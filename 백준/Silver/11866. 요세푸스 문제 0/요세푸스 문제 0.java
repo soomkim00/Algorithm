@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,28 +13,24 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
 
-		boolean[] numbers = new boolean[n];  // 0 ~ n-1 > 출력 시 +1
-		int idx = 0;
+		Deque<Integer> queue = new ArrayDeque<>();
+
+		for (int i = 1; i <= n; i++) {
+			queue.offer(i);
+		}
+
 		StringBuilder sb = new StringBuilder();
 		sb.append("<");
 
-		for (int i = 0; i < n; i++) {
-			int temp = 0;
-
-			while (true) {
-				if (!numbers[idx]) {
-					temp++;
-				}
-				if (temp == k) {
-					numbers[idx] = true;
-					break;
-				}
-				idx = idx == n - 1 ? 0 : idx + 1;
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = 0; j < k - 1; j++) {
+				queue.offer(queue.poll());
 			}
 
-			sb.append(idx + 1).append(", ");
+			sb.append(queue.poll()).append(", ");
 		}
-		sb.delete(sb.length() - 2, sb.length()).append(">");
+
+		sb.append(queue.poll()).append(">");
 		System.out.print(sb);
 
 	}
