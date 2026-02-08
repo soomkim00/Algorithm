@@ -3,8 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet; // Set으로 변경
+import java.util.Set;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -15,26 +15,24 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 
-		Map<String, Integer> nameMap = new HashMap<>();
+		Set<String> nameSet = new HashSet<>();
 
 		for (int i = 0; i < n; i++) {
-			String name = br.readLine();
-			nameMap.put(name, 1);
+			nameSet.add(br.readLine());
 		}
 
-		int total = 0;
 		ArrayList<String> list = new ArrayList<>();
 		for (int i = 0; i < m; i++) {
 			String name = br.readLine();
-			if (nameMap.containsKey(name)) {
-				total++;
+			if (nameSet.contains(name)) {
 				list.add(name);
 			}
 		}
 
-		StringBuilder sb = new StringBuilder();
 		Collections.sort(list);
-		sb.append(total).append('\n');
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(list.size()).append('\n');
 
 		for (String name : list) {
 			sb.append(name).append('\n');
