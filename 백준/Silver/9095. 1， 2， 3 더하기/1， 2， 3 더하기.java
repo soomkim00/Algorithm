@@ -7,36 +7,23 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine());
 
-		int[] result = new int[12];  // 0 ~ 11
-		for (int i = 0; i < 12; i++) {
-			result[i] = solve(i);
+		int[] dp = new int[11];  // 0 ~ 10
+		dp[1] = 1;
+		dp[2] = 2;
+		dp[3] = 4;
+
+		for (int i = 4; i < 11; i++) {
+			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
 		}
 
 		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < t; i++) {
 			int input = Integer.parseInt(br.readLine());
-			sb.append(result[input]).append('\n');
+			sb.append(dp[input]).append('\n');
 		}
 
 		System.out.print(sb);
 	}
 
-	public static int solve(int target) {
-		return dfs(0, target);
-	}
-
-	private static int dfs(int currentSum, int target) {
-		if (currentSum > target) {
-			return 0;
-		}
-
-		if (currentSum == target) {
-			return 1;
-		}
-
-		return dfs(currentSum + 1, target)
-			+ dfs(currentSum + 2, target)
-			+ dfs(currentSum + 3, target);
-	}
 }
