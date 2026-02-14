@@ -1,37 +1,36 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-        long[] prefix = new long[N];
-        st = new StringTokenizer(br.readLine());
-        prefix[0] = Long.parseLong(st.nextToken());
-        for (int i = 1; i < N; i++) {
-            prefix[i] = prefix[i - 1] + Long.parseLong(st.nextToken());
-        }
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 
-        StringBuilder sb = new StringBuilder();
-        for (int q = 0; q < M; q++) {
-            st = new StringTokenizer(br.readLine());
-            int i = Integer.parseInt(st.nextToken());
-            int j = Integer.parseInt(st.nextToken());
+		int[] numbers = new int[n + 1];
+		StringTokenizer st2 = new StringTokenizer(br.readLine());
+		for (int i = 1; i <= n; i++) {
+			numbers[i] = Integer.parseInt(st2.nextToken());
+		}
 
-            int leftIdx = i - 2;   // Python의 i-2
-            int rightIdx = j - 1;  // Python의 j-1
+		for (int i = 2; i <= n; i++) {
+			numbers[i] += numbers[i - 1];
+		}
 
-            if (leftIdx < 0) {
-                sb.append(prefix[rightIdx]).append('\n');
-            } else {
-                sb.append(prefix[rightIdx] - prefix[leftIdx]).append('\n');
-            }
-        }
+		StringBuilder sb = new StringBuilder();
+		for (int k = 0; k < m; k++) {
+			StringTokenizer st3 = new StringTokenizer(br.readLine());
+			int i = Integer.parseInt(st3.nextToken());
+			int j = Integer.parseInt(st3.nextToken());
 
-        System.out.print(sb.toString());
-    }
+			sb.append(numbers[j] - numbers[i - 1]).append('\n');
+		}
+
+		System.out.print(sb);
+	}
 }
