@@ -35,7 +35,6 @@ public class Main {
 
 		while (left <= right) {
 			int mid = left + (right - left) / 2;
-			;
 
 			if (isEnough(mid)) {
 				left = mid + 1;
