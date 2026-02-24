@@ -22,7 +22,7 @@ public class Main {
 		int[] sortedData = rawData.clone();
 		Arrays.sort(sortedData);
 
-		HashMap<Integer, Integer> rankingMap = new HashMap<>();
+		HashMap<Integer, Integer> rankingMap = new HashMap<>(n);
 		int rank = 0;
 
 		for (int value : sortedData) {
