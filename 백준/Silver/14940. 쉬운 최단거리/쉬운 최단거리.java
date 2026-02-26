@@ -63,11 +63,14 @@ public class Main {
 			}
 		}
 
+		StringBuilder sb = new StringBuilder();
 		for (int r = 0; r < n; r++) {
 			for (int c = 0; c < m; c++) {
-				System.out.print(map[r][c] + " ");
+				sb.append(map[r][c]).append(' ');
 			}
-			System.out.println();
+			sb.append('\n');
 		}
+
+		System.out.print(sb);
 	}
 }
