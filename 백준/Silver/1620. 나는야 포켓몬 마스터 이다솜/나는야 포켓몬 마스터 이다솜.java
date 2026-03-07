@@ -37,11 +37,6 @@ public class Main {
 	}
 
 	private static boolean isNumeric(String s) {
-		try {
-			Integer.parseInt(s);
-			return true;
-		} catch (NumberFormatException e) {
-			return false;
-		}
+		return Character.isDigit(s.charAt(0));
 	}
 }
