@@ -20,7 +20,7 @@ public class Main {
 		int result = 0;
 		for (int i = n - 1; i >= 0; i--) {
 			result += k / coin[i];
-			k -= (k / coin[i]) * coin[i];
+			k %= coin[i];
 
 			if (k == 0) {
 				System.out.println(result);
