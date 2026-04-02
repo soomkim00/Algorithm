@@ -20,15 +20,13 @@ public class Main {
 
 		for (int i = 0; i < n; i++) {
 			String input = br.readLine();
-			int j = 0;
-			for (char c : input.toCharArray()) {
+			for (int j = 0; j < m; j++) {
+				char c = input.charAt(j);
 				if (c == 'I') {
 					sr = i;
 					sc = j;
 				}
-
 				campus[i][j] = c;
-				j++;
 			}
 		}
 
