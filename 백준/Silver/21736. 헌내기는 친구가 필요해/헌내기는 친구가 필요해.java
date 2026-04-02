@@ -34,6 +34,7 @@ public class Main {
 
 		Deque<int[]> queue = new ArrayDeque<>();
 		queue.offer(new int[] {sr, sc});
+		campus[sr][sc] = 'X';
 
 		int[][] delta = new int[][] {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
