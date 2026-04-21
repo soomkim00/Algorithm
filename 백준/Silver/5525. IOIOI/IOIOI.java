@@ -11,42 +11,19 @@ public class Main {
 		int m = Integer.parseInt(br.readLine());
 		char[] input = br.readLine().toCharArray();
 
-		int left = 0;
-		int right = 0;
 		int result = 0;
 		int count = 0;
 
-		for (int i = 0; i < m; i++) {
-			if (input[i] == 'I') {
-				left = i;
-				right = i;
-				break;
-			}
-		}
-
-		while (right < m - 2) {
-			if (input[right + 1] != 'O') {
-				count = 0;
-				right++;
-				left = right;
-			} else if (input[right + 2] != 'I') {
-				count = 0;
-				while (right < m - 2) {
-					right++;
-					if (input[right] == 'I') {
-						left = right;
-						break;
-					}
-				}
-			} else {
+		for (int i = 0; i < m-2; i++) {
+			if (input[i] == 'I' && input[i+1] == 'O' && input[i+2] == 'I') {
 				count++;
-				right += 2;
 				if (count == n) {
 					result++;
-					count = 0;
-					left += 2;
-					right = left;
+					count--;
 				}
+				i++;
+			} else {
+				count = 0;
 			}
 		}
 
