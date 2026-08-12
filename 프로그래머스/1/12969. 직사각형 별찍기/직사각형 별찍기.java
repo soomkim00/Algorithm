@@ -1,6 +1,8 @@
+import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 class Solution {
@@ -10,12 +12,14 @@ class Solution {
         
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print("*");
+                bw.write("*");
             }
-            System.out.println();
+            bw.newLine();
         }
+        bw.flush();
+        bw.close();
     }
 }
