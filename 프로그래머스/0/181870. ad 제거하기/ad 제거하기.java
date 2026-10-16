@@ -1,0 +1,14 @@
+import java.util.*;
+
+class Solution {
+    public String[] solution(String[] strArr) {
+        ArrayList<String> list = new ArrayList<>();
+        for (String str : strArr) {
+            if (!str.contains("ad")) {
+                list.add(str);
+            }
+        }
+        String[] arr = list.toArray(new String[0]); 
+        return arr;
+    }
+}
